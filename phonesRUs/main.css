@@ -1,0 +1,91 @@
+body {
+    color: #191970;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* link colors */
+a:link, a:visited, a:active {
+    color: #191970;
+}
+
+a:hover {
+    color: #28752c;
+}
+
+.content {
+    margin-top: 7%;
+}
+
+#productLinkMain {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+.card-image-top {
+    height: 200;
+}
+
+#footer {
+    background-color: #191970;
+    color: #fff;
+    padding: 0.5%;
+    width: 100%;
+}
+
+#footerCheckout {
+    position: fixed;
+    bottom: 0;
+    background-color: #191970;
+    color: #fff;
+    padding: 0.5%;
+    width: 100%;
+}
+
+#footer a, #footerCheckout a {
+    color: #fff;
+}
+
+.brands {
+    margin: 1%;
+}
+
+#contactForm {
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+#mobileHead {
+    display: none;
+}
+
+.HoverDiv {
+    position: relative;
+    overflow: hidden;
+  }
+  
+.HoverDiv img {
+    max-width: 100%;
+    text-align:center;
+    -moz-transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  
+.HoverDiv:hover img {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+@media only screen and (max-width: 768px) {
+    .content {
+        margin-top: 30%;
+    }
+
+    #aboutItemImage, #carouselExampleSlidesOnly, #mobileHead {
+        display: none;
+    }
+}

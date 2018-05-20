@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Phones R Us | Checkout</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    
+    <link href="main.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- nav -->
+    <div class="container">
+            <nav class="navbar navbar-expand-lg fixed-top navbar-light" style="background-color: #fff; border-bottom: 2px solid #191970;">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/phonesrus.jpg" width="200" height="50" class="d-inline-block align-top" alt="Phones R Us">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Products
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="android.html">Android Phones</a>
+                                <a class="dropdown-item" href="iphone.html">Apple Phones</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="newitems.html">New Items</a>
+                            <a class="dropdown-item" href="popularitems.html">Best Sellers</a>
+                            <a class="dropdown-item" href="saleitems.html">On Sale</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="checkout.html">Checkout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                </div>
+            </nav>
+            </div>
+
+    <!-- contact -->
+    <div class="container content">
+            <h3 style="margin-bottom: 3%; text-align: center;">Checkout</h3>
+       
+        <!-- start cart content -->
+    <div class="container" id="content">
+        
+                <div id="div1">
+                    <h3 id="items"></h3>
+                    <h3 id="items2"></h3>
+                    <h3 id="items3"></h3>
+                    <h3 id="items4"></h3>
+                    <h3 id="items5"></h3>
+                    <h3 id="items6"></h3>
+                    <h3 id="items7"></h3>
+                    <h3 id="items8"></h3>
+                    <h3 id="items9"></h3>
+                    <h3 id="items10"></h3>
+                    <h3 id="items11"></h3>
+                    <h3 id="items12"></h3>
+                    <h3 id="items13"></h3>
+                    <h3 id="items14"></h3>
+                    <h3 id="items15"></h3>
+                    <h3 id="items16"></h3>
+                    <h3 id="items17"></h3>
+                    <h3 id="items18"></h3>
+                    
+                    <h3 id="totals" style="font-weight: bold; margin-top: 2%;"></h3>
+                    <h3 id="cancel"></h3>
+                    <br style="margin-top: 1%;">
+                    <button class="btn-success  btn-lg" type="button" id="my-btn" onclick="payment()">Buy</button>
+                    <button class="btn-danger  btn-lg" type="submit" onclick="removeItems()" id="my-btn2">Cancel</button>
+                </div>
+        
+        
+                <div id="my-div">
+                    <!-- CREDIT CARD FORM STARTS HERE -->
+                    <div class="center-block panel panel-default credit-card-box" id="cardinfo" style="display: none;">
+                        <div class="panel-heading display-table">
+                            <div class="row display-tr">
+                                <h3 class="panel-title display-td">Payment Details</h3>
+                                <div class="display-td">
+                                    <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                            <form role="form" id="payment-form">
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label for="cardNumber">CARD NUMBER</label>
+                                            <div class="input-group">
+                                                <input type="tel" class="form-control" name="cardNumber" placeholder="Valid Card Number" autocomplete="cc-number" required autofocus />
+                                                <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-7 col-md-7">
+                                        <div class="form-group">
+                                            <label for="cardExpiry"><span class="hidden-xs">EXPIRATION</span><span class="visible-xs-inline">EXP</span> DATE</label>
+                                            <input type="tel" class="form-control" name="cardExpiry" placeholder="MM / YY" autocomplete="cc-exp" required />
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-5 col-md-5 pull-right">
+                                        <div class="form-group">
+                                            <label for="cardCVC">CV CODE</label>
+                                            <input type="tel" class="form-control" name="cardCVC" placeholder="CVC" autocomplete="cc-csc" required />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="form-group">
+                                            <label for="couponCode">COUPON CODE</label>
+                                            <input type="text" class="form-control" name="couponCode" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <button class="btn btn-success btn-lg btn-block" type="button" id="paybutton" onclick="orderComplete()">pay</button>
+                                    </div>
+                                </div>
+                                <div class="row" style="display:none;">
+                                    <div class="col-xs-12">
+                                        <p class="payment-errors"></p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- CREDIT CARD FORM ENDS HERE -->
+        
+        
+                </div>        
+        
+            </div>
+            </div>
+        
+            </div>
+            </div>
+
+
+    </div>
+    
+    <!-- footer -->
+    <div class="text-center" id="footerCheckout">
+        <h6>© 2018 - Phones R Us<br>
+            questions@phonesrus.com
+            <em><p>
+                designed and built by <a href="http://john.hellopellow.com" target="_blank">john pellow</a>
+            </p></em></h6>
+    </div>
+
+    <!-- JS links -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    
+        
+    <script>
+        var cardinfo = document.getElementById("cardinfo");
+        cardinfo.style.display = "none";
+        var name, name1, name2, name3, name4, name5, name6, name7, name8, name9, name10, name11, name12, name13, name14, name15, name16, name17 = 0;
+        var num1, num2, num3, num4, total = 0;
+        var successButton = document.getElementById("my-btn");
+        var dangerButton = document.getElementById("my-btn2");
+
+        successButton.style.display = "none";
+        dangerButton.style.display = "none";
+
+        name = Number(localStorage.getItem("googlePixel"));
+        name1 = Number(localStorage.getItem("samsungGalaxyS9"));
+        name2 = Number(localStorage.getItem("googlePixel2"));
+        name3 = Number(localStorage.getItem("lgv30"));
+        name4 = Number(localStorage.getItem("onePlus5"))
+        name5 = Number(localStorage.getItem("googlePixelXL"));
+        name6 = Number(localStorage.getItem("motoZ2Force"));
+        name7 = Number(localStorage.getItem("iPhone8"));
+        name8 = Number(localStorage.getItem("iPhone7Plus"));
+        name9 = Number(localStorage.getItem("iPhone7"));
+        name10 = Number(localStorage.getItem("iPhoneSE"));
+        name11 = Number(localStorage.getItem("iPhone6SPlus"));
+        name12 = Number(localStorage.getItem("iPhone6S"));
+        name13 = Number(localStorage.getItem("sonyxperoaxz2"));
+        name14 = Number(localStorage.getItem("huaweimate10pro"));
+        name15 = Number(localStorage.getItem("onePlus5T"));
+        name16 = Number(localStorage.getItem("samsungGalaxyS7"));
+        name17 = Number(localStorage.getItem("motoZ"));
+
+
+        if (!parseInt(name) === 0 || !parseInt(name1) === 0 || !parseInt(name2) === 0 || !parseInt(name3) === 0 || !parseInt(name4) === 0 || !parseInt(name5) === 0 || 
+        !parseInt(name6) === 0 || !parseInt(name7) === 0 || !parseInt(name8) === 0 || !parseInt(name9) === 0 || !parseInt(name10) === 0 || !parseInt(name11) === 0 || 
+        !parseInt(name12) === 0 || !parseInt(name13) === 0 || !parseInt(name14) === 0 || !parseInt(name15) === 0 || !parseInt(name16) === 0 || !parseInt(name17) === 0) {
+            document.getElementById("items").innerHTML = "<strong>Nothing has been added to the cart</strong>";
+            localStorage.setItem("message", "Items removed");
+
+        } else {
+
+        }
+
+        // show totals
+        if (parseInt(name) === 0) {} else {
+            document.getElementById("items").innerHTML = "Google Pixel: $" + name;
+        }
+
+        if (parseInt(name1) === 0) {
+
+        } else {
+            document.getElementById("items2").innerHTML = "Samsung Galaxy S9: $" + name1;
+        }
+        if (parseInt(name2) === 0) {
+
+        } else {
+            document.getElementById("items3").innerHTML = "Google Pixel 2: $" + name2;
+        }
+        if (parseInt(name3) === 0) {
+
+        } else {
+            document.getElementById("items4").innerHTML = "LG V30: $" + name3;
+        }
+        if (parseInt(name4) === 0) {
+
+        } else {
+            document.getElementById("items5").innerHTML = "OnePlus 5: $" + name4;
+        }
+        if (parseInt(name5) === 0) {
+
+        } else {
+            document.getElementById("items6").innerHTML = "Google Pixel XL: $" + name5;
+        }
+        if (parseInt(name6) === 0) {
+
+        } else {
+            document.getElementById("items7").innerHTML = "Moto Z2 Force: $" + name6;
+        }
+        if (parseInt(name7) === 0) {
+
+        } else {
+            document.getElementById("items8").innerHTML = "iPhone 8: $" + name7;
+        }
+        if (parseInt(name8) === 0) {
+
+        } else {
+            document.getElementById("items9").innerHTML = "iPhone 7 Plus: $" + name8;
+        }
+        if (parseInt(name9) === 0) {
+
+        } else {
+            document.getElementById("items10").innerHTML = "iPhone 7: $" + name9;
+        }
+        if (parseInt(name10) === 0) {
+
+        } else {
+            document.getElementById("items11").innerHTML = "iPhone SE: $" + name10;
+        }
+        if (parseInt(name11) === 0) {
+
+        } else {
+            document.getElementById("items12").innerHTML = "iPhone 6s Plus: $" + name11;
+        }
+        if (parseInt(name12) === 0) {
+
+        } else {
+            document.getElementById("items13").innerHTML = "iPhone 6s: $" + name12;
+        }
+        if (parseInt(name13) === 0) {
+
+        } else {
+            document.getElementById("items14").innerHTML = "Sony Xperoa XZ2: $" + name13;
+        }
+        if (parseInt(name14) === 0) {
+
+        } else {
+            document.getElementById("items15").innerHTML = "Huawei Mate 10 Pro: $" + name14;
+        }
+        if (parseInt(name15) === 0) {
+
+        } else {
+            document.getElementById("items16").innerHTML = "One Plus 5T: $" + name15;
+        }
+        if (parseInt(name16) === 0) {
+
+        } else {
+            document.getElementById("items17").innerHTML = "Samsung Galaxy S7: $" + name16;
+        }
+        if (parseInt(name17) === 0) {
+
+        } else {
+            document.getElementById("items18").innerHTML = "Moto Z: $" + name17;
+        }
+
+
+        //show total due
+        total = Number(name) + Number(name1) + Number(name2) + Number(name3) + Number(name4) + Number(name5) + 
+        Number(name6) + Number(name7) + Number(name8) + Number(name9) + Number(name10) + Number(name11) + 
+        Number(name12) + Number(name13) + Number(name14) + Number(name15) + Number(name16) + Number(name17);
+
+        if (!total == 0) {
+            document.getElementById("totals").innerHTML = "Total Amount Due: $" + total;
+            successButton.style.display = "inline";
+            dangerButton.style.display = "inline";
+            localStorage.setItem("total", total);
+        }
+
+        // cancel button
+        function removeItems() {
+            localStorage.clear();
+            $('#items').hide();
+            $('#items2').hide();
+            $('#items3').hide();
+            $('#items4').hide();
+            $('#items5').hide();
+            $('#items6').hide();
+            $('#items7').hide();
+            $('#items8').hide();
+            $('#items9').hide();
+            $('#items10').hide();
+            $('#items11').hide();
+            $('#items12').hide();
+            $('#items13').hide();
+            $('#items14').hide();
+            $('#items15').hide();
+            $('#items16').hide();
+            $('#items17').hide();
+            $('#items18').hide();
+            $('#totals').hide();
+            $('#my-btn').hide();
+            $('#my-btn2').hide();
+            document.getElementById("cancel").innerHTML = "Items Removed Successfully";
+                        setTimeout(function () { if (self.name != 'refreshed'){ self.name = 'refreshed'; self.location.reload(true); } else { self.name = ''; } }, 3000);
+        }
+
+        //payment
+        function payment() {
+            var myElement = document.getElementById('my-div');
+            var pageWidth = window.innerWidth,
+                pageHeight = window.innerHeight,
+                myElementWidth = myElement.offsetWidth,
+                myElementHeight = myElement.offsetHeight;
+            myElement.style.top = (pageHeight / 2) - (myElementHeight / 2) + "px";
+            myElement.style.left = (pageWidth / 2) - (myElementWidth / 2) + "px";
+            var cardinfo = document.getElementById("cardinfo");
+            cardinfo.style.display = "inline-grid";
+            var paybutton = document.getElementById("paybutton");
+            var total = Number(localStorage.getItem("total"));
+            paybutton.innerHTML = "Pay $" + total;
+            $(document).ready(function() {
+
+                $("#div1").remove();
+
+            });
+
+        }
+
+        function orderComplete() {
+
+            // thank you for your order message
+            $(document).ready(function() {
+
+                $("#my-div").remove();
+                alert('Thank you for your order!');
+                localStorage.clear();
+
+            });
+
+
+
+
+        }
+
+                if(localStorage.length===0){
+                document.getElementById("totalhd").style.display = 'none';
+                    $(document).ready(function() {
+                          $('body').append('<h3 id="center" style="text-align: center; margin-top:30%;">There are no items on the cart</h3>');
+                });
+}
+
+    </script>
+
+</body>
+</html>
